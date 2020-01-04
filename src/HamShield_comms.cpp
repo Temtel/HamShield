@@ -90,7 +90,7 @@ int8_t HSreadWord(uint8_t devAddr, uint8_t regAddr, uint16_t *data)
 }
 
 
-bool HSwriteBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data)
+_Bool HSwriteBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data)
 {
 	uint16_t w;
     HSreadWord(devAddr, regAddr, &w);
@@ -98,7 +98,7 @@ bool HSwriteBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data
     return HSwriteWord(devAddr, regAddr, w);
 }
 
-bool HSwriteBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t data)
+_Bool HSwriteBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t data)
 {
 uint16_t w;
     if (HSreadWord(devAddr, regAddr, &w) != 0) {
@@ -113,7 +113,7 @@ uint16_t w;
     }
 }
 
-bool HSwriteWord(uint8_t devAddr, uint8_t regAddr, uint16_t data)
+_Bool HSwriteWord(uint8_t devAddr, uint8_t regAddr, uint16_t data)
 {
 	//return I2Cdev::writeWord(devAddr, regAddr, data);
 	
