@@ -30,9 +30,9 @@ int8_t HSreadBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t *da
 int8_t HSreadBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t *data);
 int8_t HSreadWord(uint8_t devAddr, uint8_t regAddr, uint16_t *data);
 
-bool HSwriteBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data);
-bool HSwriteBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t data);
-bool HSwriteWord(uint8_t devAddr, uint8_t regAddr, uint16_t data);
+_Bool HSwriteBitW(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint16_t data);
+_Bool HSwriteBitsW(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint16_t data);
+_Bool HSwriteWord(uint8_t devAddr, uint8_t regAddr, uint16_t data);
 
 
 // hardware abstraction layer
